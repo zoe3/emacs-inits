@@ -4,7 +4,7 @@
 (require 'migemo)
 (setq migemo-command "cmigemo")
 (setq migemo-options '("-q" "--emacs"))
-(setq migemo-directory "c:/msys64/home/dstrain/.emacs.d/bin/cmigemo-default-win64/dict/cp932/migemo-dict")
+(setq migemo-dictionary "c:/msys64/home/dstrain/.emacs.d/bin/cmigemo-default-win64/dict/cp932/migemo-dict")
 (setq migemo-user-directory nil)
 (setq migemo-regex-directory nil)
 (setq migemo-coding-system 'cp932-dos)
