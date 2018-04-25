@@ -2,8 +2,6 @@
 (setq inhibit-startup-message t)
 (set-locale-environment nil)
 (set-language-environment 'Japanese)
-;; (prefer-coding-system 'utf-8)
-(prefer-coding-system 'cp932)
 
 ;; Emacs停止確認
 (setq confirm-kill-emacs 'y-or-n-p)
@@ -26,19 +24,6 @@
 ;; 改行の文字
 (setq-default fill-column 95)
 (setq auto-fill-mode nil)
-
-;; 文字コードを設定
-(when (eq system-type 'windows-nt)
-  (set-face-attribute 'default nil :family "MigMix 1M" :height 100)
-  (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "MigMix 1M")))
-
-;; 画面の解像度によりフレームサイズを変化させる
-(when window-system
-  (if (>= (x-display-pixel-width) 800) (setq width-gain 0.85) (setq width-gain 0.9))
-  (if (>= (x-display-pixel-height) 1000) (setq height-gain 0.85) (setq height-gain 0.9))
-  (set-frame-size (selected-frame)
-		  (floor (/ (* (x-display-pixel-width) width-gain) (frame-char-width)))
-		  (floor (/ (* (x-display-pixel-height) height-gain) (frame-char-height)))))
 
 ;; カーソルの位置を表示する
 (column-number-mode t)
@@ -64,5 +49,3 @@
 (setq backup-inhibited t)
 ;; 終了時にオートセーブファイルを消す
 (setq delte-auto-save-files t)
-
-
