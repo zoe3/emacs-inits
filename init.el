@@ -65,3 +65,25 @@
 ;; 折り返しトグルコマンド
 (define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
 
+;; elpy
+(use-package elpy
+  :config
+  (elpy-enable)
+  (setq elpy-rpc-python-command "python3")
+  (setq python-shell-interpreter "ipython3"
+      python-shell-interpreter-args "-i --simple-prompt"))
+
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (jedi elpy use-package init-loader))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
